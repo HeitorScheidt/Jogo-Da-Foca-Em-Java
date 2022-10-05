@@ -43,10 +43,12 @@ public class Forca
 					System.out.print   ("Qual letra? ");
 					char letra = Character.toUpperCase (Teclado.getUmChar());
 
+
 					if (controladorDeLetrasJaDigitadas.isJaDigitada (letra))
 						System.err.println ("Essa letra ja foi digitada!\n");
 					else
 					{
+
 						controladorDeLetrasJaDigitadas.registre (letra);
 
 						int qtd = palavra.getQuantidade (letra);

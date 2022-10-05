@@ -71,13 +71,13 @@ public class Tracinhos implements Cloneable
         if (obj == null)
             return false;
 
-        //Compara se classe de obj é diferente da classe Palavra
-        if (obj.getClass() != Palavra.class)
+        //Compara se classe de obj é diferente da classe Tracinhos
+        if (obj.getClass() != Tracinhos.class)
             return false;
     
         //Compara se o texto de this é igual ao texto de obj
         //após compararmos as classes no if de cima ja sabemos que las são do mesmo tipo entao 
-        //Revelamos (Consideramos) ele to tipo palavra ao adicionar "Palavra"
+        //Revelamos (Consideramos) ele to tipo palavra ao adicionar "Tracinhos"
         if (this.texto != ((Tracinhos) obj).texto)
             return false;
         

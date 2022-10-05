@@ -5,10 +5,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     public ControladorDeLetrasJaDigitadas ()
     {
         // torna this.letrasJaDigitadas igual ao String vazio
-        /*int z =0
-         * if (letrasJaDigitadas.isEmpity() == true)
-         * 
-         */
+        
         this.letrasJaDigitadas = "";
     }
 
@@ -17,11 +14,14 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         // percorrer o String this.letrasJaDigitadas e verificar se ele
         // possui a letra fornecida, retornando true em caso afirmativo
         // ou false em caso negativo
+
         for (int i = 0; i < this.letrasJaDigitadas.length(); i++){
+
             if (letra == this.letrasJaDigitadas.charAt(i)){
                 return true;
             }
         }
+
         return false;
     }
 
@@ -31,6 +31,10 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
 		// o m�todo this.isJaDigitada, para isso), lancando uma exce��o
 		// em caso afirmativo.
 		// concatena a letra fornecida a this.letrasJaDigitadas.
+        if(this.isJaDigitada(letra)){
+            throw new Exception("Essa letra ja foi digitada! tente uma outra.");
+        }
+            this.letrasJaDigitadas = Character.toString(letra);    
 		
     }
 
@@ -52,7 +56,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
             return false;
 
         //Compara se classe de obj é diferente da classe Palavra
-        if (obj.getClass() != Palavra.class)
+        if (obj.getClass() != ControladorDeLetrasJaDigitadas.class)
             return false;
     
         //Compara se o texto de this é igual ao texto de obj

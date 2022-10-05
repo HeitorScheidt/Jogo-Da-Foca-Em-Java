@@ -51,7 +51,7 @@ public class ControladorDeErros implements Cloneable
             return false;
 
         //Compara se classe de obj é diferente da classe Palavra
-        if (obj.getClass() != Palavra.class)
+        if (obj.getClass() != ControladorDeErros.class)
             return false;
         
         //Compara se o texto de this é igual ao texto de obj
